@@ -1,4 +1,4 @@
-package HomeWork;
+package HomeWork.CssSelector;
 
 import Utility.BaseDriver;
 import Utility.MyFunc;
@@ -6,17 +6,17 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-public class TestSix extends BaseDriver {
+public class TestFive extends BaseDriver {
 
     @Test
-    public void soru6(){
-        driver.get("https://testpages.herokuapp.com/styled/index.html ");
+    public void soru5(){
+        driver.get("https://testpages.herokuapp.com/styled/index.html");
 
         WebElement fakeAlert=driver.findElement(By.cssSelector("[class='page-body'] >:nth-child(6)>:nth-child(5)>ul>:nth-child(2)>a"));
         fakeAlert.click();
         MyFunc.Bekle(2);
 
-        WebElement click=driver.findElement(By.cssSelector("[class='centered']~div>input"));
+        WebElement click=driver.findElement(By.cssSelector("[class='page-body'] >:nth-child(5)>input"));
         click.click();
         MyFunc.Bekle(2);
 
@@ -24,9 +24,9 @@ public class TestSix extends BaseDriver {
         ok.click();
         MyFunc.Bekle(2);
 
-        finishDriver();
-
-
+    finishDriver();
 
     }
+
+
 }
