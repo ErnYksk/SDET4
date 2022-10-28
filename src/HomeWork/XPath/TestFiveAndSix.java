@@ -7,11 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 public class TestFiveAndSix extends BaseDriver {
-    //Bu websitesine gidiniz.  [https://testpages.herokuapp.com/styled/index.html]
-//Fake Alerts' tıklayınız.
-//Show Alert Box'a tıklayınız.
-//Ok'a tıklayınız.
-//Alert kapanmalıdır.
+
     @Test
     public void Test() {
         driver.get("https://testpages.herokuapp.com/styled/index.html");
