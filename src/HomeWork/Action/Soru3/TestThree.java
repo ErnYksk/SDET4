@@ -11,7 +11,7 @@ import java.util.List;
 
 public class TestThree extends BaseDriver {
 @Test
-    public void Test(){
+    public void Test() throws InterruptedException {
     driver.get("http://dhtmlgoodies.com/scripts/drag-drop-nodes-quiz/drag-drop-nodes-quiz.html");
 
     List<WebElement> objects=driver.findElements(By.cssSelector("[id*='node']"));
@@ -21,8 +21,10 @@ public class TestThree extends BaseDriver {
         for(WebElement to:boxes){
             actions.clickAndHold(belongs).build().perform();
             MyFunc.Bekle(1);
+
             actions.moveToElement(to).release().build().perform();
             MyFunc.Bekle(1);
+
             if(belongs.getAttribute("class").contains("correctAnswer")){
 
                 break;
